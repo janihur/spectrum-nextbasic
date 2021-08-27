@@ -1,0 +1,16 @@
+ 10 rem The bits matches buttons of 8BitDo SN30 Pro USB gamepad
+ 20 cls
+ 30 rem Read a byte from hardware address port.
+ 40 let %j = in 31 : rem DEC 31 = HEX 1F = KEMPSTON Joystick 1
+ 50 if %j = bin 00000000 then goto 40
+ 60 rem Use bitmasks for comparison as several combinations are possible
+ 70 if %j & bin 00000001 = bin 00000001 then print "RIGHT (bit 0) ";
+ 80 if %j & bin 00000010 = bin 00000010 then print "LEFT (bit 1) ";
+ 90 if %j & bin 00000100 = bin 00000100 then print "DOWN (bit 2) ";
+100 if %j & bin 00001000 = bin 00001000 then print "UP (bit 3) ";
+110 if %j & bin 00010000 = bin 00010000 then print "FIRE (Button B) (bit 4) ";
+120 if %j & bin 00100000 = bin 00100000 then print "(Button A) (bit 5) ";
+130 if %j & bin 01000000 = bin 01000000 then print "(Button Y) (bit 6) ";
+140 if %j & bin 10000000 = bin 10000000 then print "(Button X) (bit 7) ";
+150 print
+160 goto 40

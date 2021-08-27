@@ -1,0 +1,31 @@
+ 10 layer 0 : cls : layer 2,1 : cls : layer clear : sprite clear
+ 20 run at 3 : rem 28 MHz
+ 30 rem Sprite and Layer System Setup. Bit 0: Enable sprites. Bit 1: Enable sprites over border.
+ 40 reg 21,bin 00000011
+ 50 bank new spr1 : load "sprite1.spr" bank spr1 : sprite bank spr1 : sprite print 1
+ 60 let %x = 100 : let %y = 100 : rem botton-right corner where the whole sprite is still visible
+ 70 let %a = 0 : rem sprite_pattern
+ 80 rem ----------
+ 90 print at 0,0; "                                ";
+100 print at 0,0; "top-left:     x = "; %x; " y = "; %y;
+110 print at 1,0; "                                ";
+120 print at 1,0; "bottom-right: x = "; %x+16; " y = "; %y+16;
+130 print at 2,0; "                                ";
+140 print at 2,0; "a:            "; %a;
+150 if %x > 60000 then %x = 0 : else if %x > 304 then %x = 304
+160 if %y > 60000 then %y = 0 : else if %y > 240 then %y = 240
+170 sprite 0,%x,%y,%a,1
+180 rem ----------
+190 let %j = in 31 : rem joystick
+200 if %j = bin 00000000 then goto 190
+210 print at 3,0; "                                ";
+220 if %j & bin 00000001 = bin 00000001 then %x = %x + 3 : print at 3,0; "RIGHT (bit 0)";
+230 if %j & bin 00000010 = bin 00000010 then %x = %x - 3 : print at 3,0; "LEFT (bit 1)";
+240 if %j & bin 00000100 = bin 00000100 then %y = %y + 3 : print at 3,0; "DOWN (bit 2)";
+250 if %j & bin 00001000 = bin 00001000 then %y = %y - 3 : print at 3,0; "UP (bit 3)";
+260 if %j & bin 00010000 = bin 00010000 then print at 3,0; "FIRE (Button B) (bit 4)"; : %a = %(1 - a) : rem flip %a
+270 if %j & bin 10000000 = bin 10000000 then print at 3,0; "FIRE (Button X) (bit 7)"; : goto 300
+280 goto 90
+290 rem ----------
+300 bank spr1 clear
+310 print at 4,0; "QUIT"

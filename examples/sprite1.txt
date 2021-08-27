@@ -1,0 +1,18 @@
+ 10 rem Clears the display of the current layer (CLear Screen).
+ 20 cls
+ 30 rem Resets the sprite attributes and global settings to defaults.
+ 40 sprite clear
+ 50 rem Reserves the next available free bank number and assigns it to the numeric variable spr1.
+ 60 bank new spr1
+ 70 rem Loads the file as binary data into bank spr1. Start reading from offset 0 and read 512 bytes. Each sprite takes 256 bytes (8-byte sprite) and we have defined two sprites: 2 * 256 = 512. Thus we are reading the first two sprites here.
+ 80 load "sprite1.spr" bank spr1,0,512
+ 90 rem Defines all 64 sprite patterns using the 16K of data (256 bytes per sprite) in bank b or with optional values o,p,n defines o sprite patterns starting with pattern p located at offset n.
+100 sprite bank spr1
+110 rem Enable sprites.
+120 sprite print 1
+130 rem Set sprite 0 to image (or sprite pattern) 0, position (60,60) with flags 1 (to be explained).
+140 sprite 0,60,60,0,1
+150 rem Set sprite 1 to image (or sprite pattern) 1, position (100,100) with flags 1 (to be explained).
+160 sprite 1,100,100,1,1
+170 rem Marks bank spr1 as free for use by other parts of the system.
+180 bank spr1 clear

@@ -1,0 +1,6 @@
+ 10 rem Reads the keyboard and prints the key (as a typewriter).
+ 20 cls : rem Clears the display of the current layer (CLear Screen).
+ 30 if inkey$ <> "" then goto 30 : rem Wait until key is released.
+ 40 if inkey$ = "" then goto 40 : rem Wait until key is pressed.
+ 50 print inkey$; : rem Print the pressed key only, no newline (;).
+ 60 goto 30

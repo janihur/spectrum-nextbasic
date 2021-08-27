@@ -1,0 +1,5 @@
+ 10 rem Read numerical data from a file to an array.
+ 20 cls
+ 30 load "datalist1.bin" data b()
+ 40 print "read data:"
+ 50 for i=1 to 10 : print i; " = "; b(i) : next i

@@ -1,0 +1,5 @@
+ 10 rem Write an array of numerical data to a file.
+ 20 cls
+ 30 print "generated data:"
+ 40 dim a(10) : for i=1 to 10 : let a(i) = 2 * i : print a(i); " "; : next i
+ 50 save "datalist1.bin" data a()
