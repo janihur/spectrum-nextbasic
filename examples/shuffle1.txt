@@ -1,0 +1,29 @@
+ 10 rem emacs -*- mode: basic; -*-
+ 20 rem modern fisher-yates in-place array shuffle
+ 30 rem https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
+ 40 cls : layer 1,2 : randomize
+ 50 rem initialize the global integer array %a() of size 10
+ 60 for %a = 1 to 10 : read %a(a) : next %a : data 0,1,2,3,4,5,6,7,8,9
+ 70 print "initial ordered array: "; : proc printarr(10)
+ 80 proc shufflearr(10)
+ 90 print " final shuffled array: "; : proc printarr(10)
+100 stop : rem end of the main program
+110 rem ------------------------------------------------------------------------
+120 defproc shufflearr(%x) : rem %x is the size of %a()
+130 local %a : local %b : local %c
+140 for %a = %x to 2 step -1 : rem %a: index of the last un-shuffled element
+150   let %b = %1 + rnd a : rem %b: index of the element that will be swapped with %a
+160   let %c = %a(a) : rem %c: temporary to hold the value of the last un-shuffled element
+170   %a(a) = %a(b) : rem swap values part 1
+180   %a(b) = %c : rem swap values part 2
+190 next %a
+200 endproc
+210 rem ------------------------------------------------------------------------
+220 defproc printarr(%x) : rem %x is the size of %a()
+230 local %a
+240 for %a = 1 to %x
+250   print %a(a); 
+260   if %a < x then print ",";
+270 next %a
+280 print ""
+290 endproc

@@ -1,0 +1,65 @@
+ 10 rem emacs -*- mode: basic; -*-
+ 20 rem abcdefghijklmnopqrstuvwxyz
+ 30 cls : layer 1,2 : randomize
+ 40 print chr$ 30; chr$ 7; : rem character horizontal size (in pixels)
+ 50 proc calctotaltickets() to a
+ 60 print "Total lottery tickets: "; a
+ 70 rem ------------------------------------------------------------------------
+ 80 proc printparticipants()
+ 90 print "Press any key to continue ..." : pause 0
+100 rem ------------------------------------------------------------------------
+110 rem TODO populate the array b$ with names and then shuffles
+120 cls
+130 dim b$(a, 20) : rem array TODO data length
+140 c = 1 : rem array index
+150 read %y : rem the number of actual data lines
+160 for %z = 1 to %y
+170   read %u, %x, w$ : rem %x number of tickets w$ name
+180   for %v = 1 to %x : b$(c) = w$ : c = c + 1 : next %v : rem multiply
+240 next %z
+245 rem TODO
+250 for c = 1 to a
+260   print c;": "; b$(c)
+270 next c
+280 rem ------------------------------------------------------------------------
+290 stop : rem main function ends here
+300 rem ------------------------------------------------------------------------
+310 defproc calctotaltickets()
+320 local %a : rem the total tickets (procedure return value)
+330 local %b : rem the number of actual data lines
+340 local %c : rem the loop counter
+350 local %d : rem throw-away read value (because not used)
+360 local %e : rem the number of tickets in the data line
+370 local f$ : rem throw-away read value (because not used)
+380 read %b
+390 for %c = 1 to %b : read %d, %e, f$ : %a = %a + e : next %c
+400 restore
+410 endproc = %a
+420 rem ------------------------------------------------------------------------
+430 defproc printparticipants()
+440 local %b : rem the number of actual data lines
+450 local %c : rem the loop counter
+460 local %d : rem throw-away read value (because not used)
+470 local e  : rem the number of tickets in the data line
+480 local f$ : rem the participant name
+490 local g$ : rem participant's share of tickets in 2 decimal
+500 read %b
+510 for %c = 1 to %b
+520   read %d, e, f$
+530   let g$ = str$(int((e/a*10000)+0.5)/100)
+540   print "Participant ";f$;" has ";e;" tickets that is ";g$;"% of all tickets"
+550 next %c
+560 restore
+570 endproc
+580 rem ------------------------------------------------------------------------
+590 data 10 : rem the number of actual data lines
+600 data  1, 9, "Mali Booth"
+610 data  2, 7, "Anthony Ramos"
+620 data  3, 7, "Madeline Robin"
+630 data  4, 4, "Declan Simpson"
+640 data  5, 4, "Sid Parks"
+650 data  6, 3, "Luciano Goddard"
+660 data  7, 2, "Otto Weeks"
+670 data  8, 1, "Axel Handley"
+680 data  9, 1, "Bree Ryder"
+690 data 10, 1, "Layla-Mae Owens"

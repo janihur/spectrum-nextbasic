@@ -1,0 +1,9 @@
+  1 rem emacs -*- mode: basic; -*-
+ 10 cls
+ 15 randomize : rem randomize rnd
+ 20 let %a = %rnd 6 : rem integer interval [0, 6), max is 65535
+ 30 print "1234567890"
+ 35 print "%a = "; %a
+ 40 for %n = 1 to 10
+ 50   print %1 + rnd 6 : rem interval [1, 6]
+ 60 next %n

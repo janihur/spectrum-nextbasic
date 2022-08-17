@@ -1,0 +1,31 @@
+ 10 rem emacs -*- mode: basic; -*-
+ 20 cls
+ 30 rem ------------------------------------------------------------------------
+ 40 rem integers
+ 50 let %a = 1 : rem decimal integer
+ 60 rem let %b = @11 : rem binary integer
+ 70 rem let %c = %$a : rem hexadecimal integer
+ 80 rem print %a : print %b : print %c : print %(a + b + c)
+ 90 rem ------------------------------------------------------------------------
+100 rem floats
+110 let a = 3 : rem float
+120 let %b = 9 : rem integer
+130 let b = %b : rem integer to float conversion
+140 let c = a/b
+150 let d = c*100
+160 let e$ = str$ d
+170 let f$ = str$ (1/11*100)
+180 print a  : rem prints 3
+190 print %b : rem prints 9
+200 print c  : rem prints 0.33333333
+210 print d  : rem prints 33.333333
+220 print e$ : rem prints 33.333333
+230 print f$ : rem prints 9.0909091
+235 rem below just truncates as int() is effectively floor-function
+240 let g$ = str$ (int(3/9*10000)/100) : rem truncates to 2 digits
+250 print g$ : rem prints 33.33
+260 let h$ = str$ (int(1/11*10000)/100) : rem truncates to 2 digits
+270 print h$ : rem prints 9.09
+275 rem 7/11 = 0.63636 -> should print 63.64
+280 let i$ = str$ (int((7/11*10000)+0.5)/100) : rem rounds
+290 print i$ : rem correctly prints 63.64

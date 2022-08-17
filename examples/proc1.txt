@@ -1,0 +1,13 @@
+ 10 rem emacs -*- mode: basic; -*-
+ 20 cls : layer 1,2
+ 30 read %a(1),%a(2),%a(3),%a(4),%a(5),%a(6),%a(7),%a(8),%a(9),%a(10)
+ 40 data 10,11,12,13,14,15,16,17,18,19
+ 45 proc printa()
+ 50 proc printb(2)
+ 55 stop
+ 60 defproc printa()
+ 70 print "array: ";%a(1);",";%a(2);",";%a(3);",";%a(4);",";%a(5);",";%a(6);",";%a(7);",";%a(8);",";%a(9);",";%a(10)
+ 80 endproc
+ 90 defproc printb(%i)
+ 95 print "array index: ";%i;" has value: ";%a(i)
+100 endproc

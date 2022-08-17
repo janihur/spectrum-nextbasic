@@ -1,0 +1,76 @@
+* Coding Tasks
+** TODO https://github.com/coding-horror/basic-computer-games
+** TODO https://github.com/pleumann/aoc21
+** TODO Study example: https://johnnymcgibbitts.itch.io/320bas
+** TODO Study example: https://johnnymcgibbitts.itch.io/tiletextbas
+** TODO Study example: https://github.com/Nextric
+** TODO Study example: leesmits workshop: sprites: https://www.youtube.com/watch?v=OZN5bo6rnIw&list=PLGwceTiAnafhgXzrzjJB7mTUk08R0IS4l
+** TODO Game: Jani Hur's SquareSnake
+I can only draw beautiful squares !
+Based on baSnake with wasd-keyboard control + joystick. Otherwise "minimalist"
+version.
+** TODO read data from file
+** TODO strings
+** DONE numbers
+** TODO Game: Wheel Of Fortune
+Used to raffle coding competition prizes.
+Draw a circle (representing chart pie), Sprite runs around the circle.
+How do I calculate a point on a circle’s circumference?:
+https://stackoverflow.com/q/839899
+** TODO sprite examples
+*** TODO moving sprite around with keys
+*** DONE moving sprite around with joystick
+** TODO Game: Jani Hur's 2048
+WASD-control
+** TODO Game: Jani Hur's Orb Run
+Based on the ORB game from the distribution. Ask permission
+** TODO typing games
+
+Teext
+
+** TODO add https://github.com/remy/zx-tools to the image
+** TODO emacs basic-mode setup
+** TODO emacs basic-mode add nextbasic keywords ?
+
+** TODO Game: Game of Life
+** DONE License
+https://en.wikipedia.org/wiki/MIT_License
+
+Copyright (c) <year> <copyright holders>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+https://en.wikipedia.org/wiki/GNU_All-permissive_License
+... of examples-directory files,
+The files are ...
+
+Copyright 2021, Jani Hurskainen <webmaster@metsankulma.net>
+
+Copying and distribution of this file, with or without modification, are
+permitted in any medium without royalty, provided the copyright notice and
+this notice are preserved. This file is offered as-is, without any warranty.
+
+** DONE how to read joystick
+
+* SpecNext Dev Wiki
+** TODO NextBasic Development Environment for Beginners
+
+* Notes
+My notes goes here ...
+https://opengameart.org/

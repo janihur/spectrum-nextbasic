@@ -1,4 +1,5 @@
-IMAGE := $(HOME)/cspect-next-2gb.img
+#IMAGE := $(HOME)/cspect-next-2gb.img
+IMAGE := /media/sf_retro-specnext/cspect-next-2gb/cspect-next-2gb.img
 IMAGE_DIR := next-basic-examples
 
 BAS := $(patsubst %.txt,%.bas,$(wildcard *.txt))

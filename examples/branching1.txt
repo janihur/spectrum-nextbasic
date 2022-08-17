@@ -1,0 +1,7 @@
+ 10 cls
+ 20 for %a = 0 to 1
+ 30   for %b = 0 to 1
+ 40     print "--- A"; %a; ":B"; %b
+ 50     if %a = 0 then print "A ZERO" : else print "A ONE" : if %b = 0 then print "B ZERO" : else print "B ONE"
+ 60   next %b
+ 70 next %a

@@ -1,0 +1,11 @@
+ 10 rem emacs -*- mode: basic; -*-
+ 20 cls : layer 1,2 : print chr$ 30; chr$ 7;
+ 30 dim a$(10,15)
+ 40 a$(1) = "0123456789"
+ 50 print a$(1);";";len a$(1)
+ 60 a$(2) = "FOO-**-BAR"
+ 70 print a$(2);";";len a$(2)
+ 80 rem looping with a variable
+ 90 for b = 1 to 2
+100   print b;": ";a$(b);";";len a$(b)
+120 next b
